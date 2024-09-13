@@ -199,6 +199,3 @@ Feedstock Maintainers
 
 * [@ehfd](https://github.com/ehfd/)
 
-
-<!-- dummy commit to enable rerendering -->
-
