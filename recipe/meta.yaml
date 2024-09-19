@@ -21,8 +21,7 @@ build:
 
 requirements:
   build:
-    - pkg-config  # [win]
-    - pkg-config  # [unix]
+    - pkg-config
     - m2-base  # [win]
     - {{ stdlib('c') }}             # [unix]
     - {{ compiler('c') }}           # [unix]
