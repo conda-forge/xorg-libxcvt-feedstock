@@ -14,19 +14,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage(name|lower) }}
 
 requirements:
   build:
-    - pkg-config
-    - m2-base  # [win]
-    - {{ stdlib('c') }}             # [unix]
-    - {{ compiler('c') }}           # [unix]
-    - {{ stdlib('m2w64_c') }}       # [win]
-    - {{ compiler('m2w64_c') }}     # [win]
+    - pkg-config                   # [unix]
+    - m2-pkg-config                # [win]
+    - m2-base                      # [win]
+    - {{ stdlib('c') }}            # [unix]
+    - {{ compiler('c') }}          # [unix]
+    - {{ stdlib('m2w64_c') }}      # [win]
+    - {{ compiler('m2w64_c') }}    # [win]
     - meson
     - ninja
 
